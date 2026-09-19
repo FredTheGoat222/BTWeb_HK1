@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Payment Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f4f7fa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .payment-card {
+            width: 100%;
+            max-width: 520px;
+            background-color: #ffffff;
+            border: 1.5px solid #6cb2eb;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+
+        .checkout-header-section {
+            background-color: #f8fafc;
+            border-bottom: 1px solid #e9ecef;
+            padding: 30px 35px 25px 35px;
+        }
+
+        .payment-body-section {
+            padding: 30px 35px 35px 35px;
+            background-color: #ffffff;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #2d3748;
+            border-bottom: 1px solid #edf2f7;
+            padding-bottom: 14px;
+            margin-bottom: 0;
+        }
+
+        .table-checkout {
+            margin-bottom: 0;
+        }
+
+        .table-checkout td {
+            padding: 14px 0;
+            border-bottom: 1px solid #edf2f7;
+            background-color: transparent;
+        }
+
+        .table-checkout tr:last-child td {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .product-title {
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 2px;
+            font-size: 0.98rem;
+        }
+
+        .product-desc {
+            font-size: 0.82rem;
+            color: #a0aec0;
+            margin-bottom: 0;
+        }
+
+        .product-price {
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 1rem;
+        }
+
+        .total-label {
+            font-weight: 700;
+            color: #2d3748;
+            font-size: 1.05rem;
+        }
+
+        .total-price {
+            font-weight: 700;
+            color: #2d3748;
+            font-size: 1.05rem;
+        }
+
+        .form-label-custom {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #718096;
+            letter-spacing: 0.8px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .form-control-custom {
+            height: 42px;
+            font-size: 0.9rem;
+            color: #4a5568;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 4px;
+            padding: 8px 12px;
+        }
+
+        .form-control-custom::placeholder {
+            color: #a0aec0;
+        }
+
+        .form-control-custom:focus {
+            border-color: #63b3ed;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.25);
+        }
+
+        .btn-proceed {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 12px;
+            border-radius: 4px;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+
+        .btn-proceed:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="min-vh-100 d-flex justify-content-center align-items-center p-3">
+
+<div class="payment-card">
+    
+    <!-- Phần 1: Bảng thông tin Checkout -->
+    <div class="checkout-header-section">
+        <h2 class="section-title">Checkout</h2>
+        <table class="table table-checkout align-middle">
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="product-title">Product 1</div>
+                        <div class="product-desc">Lorem ipsum dolor sit amet</div>
+                    </td>
+                    <td class="text-end product-price">$200</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="product-title">Product 2</div>
+                        <div class="product-desc">Lorem ipsum dolor sit amet</div>
+                    </td>
+                    <td class="text-end product-price">$120</td>
+                </tr>
+                <tr>
+                    <td class="total-label">Total</td>
+                    <td class="text-end total-price">$320</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Phần 2: Form nhập thông tin thanh toán Credit Card -->
+    <div class="payment-body-section">
+        <h2 class="section-title mb-4">Credit Card Details</h2>
+
+        <form action="#" method="post" onsubmit="return false;">
+            <!-- Dòng 1: CARD HOLDER & EXPIRATION DATE -->
+            <div class="row g-3 mb-3">
+                <div class="col-7">
+                    <label class="form-label form-label-custom">Card Holder</label>
+                    <input type="text" class="form-control form-control-custom" placeholder="Card Holder">
+                </div>
+                <div class="col-5">
+                    <label class="form-label form-label-custom">Expiration Date</label>
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="text" class="form-control form-control-custom text-center" placeholder="MM" maxlength="2">
+                        <span class="text-secondary">/</span>
+                        <input type="text" class="form-control form-control-custom text-center" placeholder="YY" maxlength="2">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dòng 2: CARD NUMBER & CVC -->
+            <div class="row g-3 mb-4">
+                <div class="col-8">
+                    <label class="form-label form-label-custom">Card Number</label>
+                    <input type="text" class="form-control form-control-custom" placeholder="Card Number">
+                </div>
+                <div class="col-4">
+                    <label class="form-label form-label-custom">CVC</label>
+                    <input type="password" class="form-control form-control-custom" placeholder="CVC" maxlength="4">
+                </div>
+            </div>
+
+            <!-- Nút Proceed -->
+            <div>
+                <button type="submit" class="btn btn-proceed">Proceed</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>

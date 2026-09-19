@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.wrapper {
+  width: 680px;
+  border: 1px solid #666;
+  background-color: #fff;
+}
+
+/* Top bar Header */
+
+.header {
+  background-color: #a33f11;
+  text-align: center;
+  padding: 8px 0;
+}
+
+.header h1 {
+  color: #cca450;
+  font-family: "Times New Roman", serif;
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+}
+.navbar {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 4px 0;
+  border-top: 1px solid #888;
+  border-bottom: 1px solid #888;
+}
+
+.navbar a {
+  color: #8b3c1b;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Banner lá vàng */
+.banner {
+  background-image: url(/bt5/html/img/line.png);
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  display: block;
+  background-size: 200px auto;
+}
+
+/* DẢI LÁ XANH NGAY DƯỚI BANNER */
+.corner-border {
+  display: flex;
+  width: 100%;
+  height: 18px; /* Thu hẹp chiều cao khung chứa */
+  overflow: hidden; /* Cắt bỏ hoàn toàn phần khoảng trắng bị đẩy ra ngoài */
+  margin-top: -1px;
+}
+
+.corner-border img {
+  flex: 1;
+  min-width: 0;
+  height: 45px; /* Phóng to chiều cao ảnh lên 45px để đẩy phần trắng lên trên */
+  object-fit: cover;
+  object-position: bottom; /* Bắt buộc dính chặt mép lá cây ở đáy */
+  transform: translateY(-28px); /* Đẩy toàn bộ ảnh lên trên để che phần trắng */
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  padding: 20px 20px 10px 20px;
+  gap: 20px;
+}
+
+.col-left {
+  flex: 1.5;
+}
+
+.col-right {
+  flex: 1;
+}
+
+.title {
+  color: #b07028;
+  font-family: "Times New Roman", serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.philosophy {
+  color: #b07028;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 1.4;
+  margin-bottom: 25px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #777;
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+.form-group input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  padding: 3px 0;
+}
+
+.btn-submit {
+  width: fit-content;
+  background-color: #6b8e23;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  font-size: 11px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Sidebar Right */
+.links-box {
+  background-color: #fdeee3;
+  border-radius: 10px;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+}
+
+.links-box h3,
+.more-info h3 {
+  color: #553311;
+  font-family: "Times New Roman", serif;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.links-box ul {
+  list-style-type: square;
+  padding-left: 18px;
+}
+
+.links-box ul li {
+  color: #b07028;
+  font-size: 11px;
+  margin-bottom: 5px;
+}
+
+.info-content {
+  display: flex;
+  gap: 8px;
+}
+
+.info-content img {
+  width: 45px;
+  height: 35px;
+  border: 1px solid #ccc;
+  padding: 1px;
+  object-fit: cover;
+}
+
+.info-content p {
+  font-size: 10px;
+  color: #555;
+  line-height: 1.3;
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  text-align: center;
+  margin-top: 15px;
+  border-top: 1px solid #777;
+  background-color: #fff;
+}
+
+.footer-img img {
+  width: 100%;
+  height: 35px;
+  object-fit: cover;
+  display: block;
+}
+
+.footer p {
+  position: relative;
+  margin-top: -20px; /* Đẩy riêng dòng chữ lên nằm giữa dải lá */
+  margin-bottom: 4px; /* Giữ khoảng cách an toàn với viền đáy, tránh tràn */
+  z-index: 2;
+  font-size: 14px;
+  color: #333;
+}

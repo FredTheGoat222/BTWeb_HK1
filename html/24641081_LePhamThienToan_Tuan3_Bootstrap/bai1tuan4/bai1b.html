@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Thumbnails - Meats</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .outer-wrapper {
+            width: 1000px;
+            border: 1px solid #dcdcdc;
+            background-color: #ffffff;
+            padding: 24px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Tái hiện chính xác phong cách Thumbnail cổ điển */
+        .custom-thumbnail {
+            border: 1px solid #e2e2e2;
+            padding: 4px;
+            background-color: #ffffff;
+            border-radius: 4px;
+        }
+
+        .custom-thumbnail img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .custom-thumbnail .caption {
+            padding: 16px 10px 10px 10px;
+        }
+
+        .card-title-custom {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 12px;
+        }
+
+        .card-desc-custom {
+            font-size: 13.5px;
+            line-height: 1.45;
+            color: #555555;
+            margin-bottom: 18px;
+            min-height: 60px;
+        }
+
+        /* Nút Eat now phong cách Bootstrap Classic */
+        .btn-eat {
+            background: linear-gradient(180deg, #0d6efd 0%, #0b5ed7 100%);
+            border: 1px solid #0a58ca;
+            color: #ffffff;
+            font-size: 13px;
+            padding: 4px 14px;
+            border-radius: 3px;
+        }
+
+        .btn-eat:hover {
+            background: #0a58ca;
+            color: #ffffff;
+        }
+
+        /* Nút Later phong cách bóng mờ cổ điển */
+        .btn-later {
+            background: linear-gradient(180deg, #ffffff 0%, #f0f0f0 100%);
+            border: 1px solid #cccccc;
+            color: #444444;
+            font-size: 13px;
+            padding: 4px 14px;
+            border-radius: 3px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+        }
+
+        .btn-later:hover {
+            background: #e6e6e6;
+            color: #222222;
+        }
+    </style>
+</head>
+<body class="min-vh-100 d-flex justify-content-center align-items-center">
+
+<div class="outer-wrapper">
+    <div class="row g-4">
+
+        <!-- Cột 1 -->
+        <div class="col-4">
+            <div class="custom-thumbnail">
+                <img 
+                    src="./cat.jpg" 
+                    alt="Kittens in basket"
+                    onerror="this.src='https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?auto=format&fit=crop&w=800&q=80'"
+                >
+                <div class="caption">
+                    <h3 class="card-title-custom">Meats</h3>
+                    <p class="card-desc-custom">
+                        Bacon ipsum dolor sit amet sirloin pancetta shoulder tongue doner, shank sausage.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-eat">Eat now!</button>
+                        <button type="button" class="btn btn-later">Later...</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cột 2 -->
+        <div class="col-4">
+            <div class="custom-thumbnail">
+                <img 
+                    src="./cat.jpg" 
+                    alt="Kittens in basket"
+                    onerror="this.src='https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?auto=format&fit=crop&w=800&q=80'"
+                >
+                <div class="caption">
+                    <h3 class="card-title-custom">Meats</h3>
+                    <p class="card-desc-custom">
+                        Bacon ipsum dolor sit amet sirloin pancetta shoulder tongue doner, shank sausage.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-eat">Eat now!</button>
+                        <button type="button" class="btn btn-later">Later...</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cột 3 -->
+        <div class="col-4">
+            <div class="custom-thumbnail">
+                <img 
+                    src="./cat.jpg" 
+                    alt="Kittens in basket"
+                    onerror="this.src='https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?auto=format&fit=crop&w=800&q=80'"
+                >
+                <div class="caption">
+                    <h3 class="card-title-custom">Meats</h3>
+                    <p class="card-desc-custom">
+                        Bacon ipsum dolor sit amet sirloin pancetta shoulder tongue doner, shank sausage.
+                    </p>
+                    <div class="d-flex gap-2">
+                        <button type="button" class="btn btn-eat">Eat now!</button>
+                        <button type="button" class="btn btn-later">Later...</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

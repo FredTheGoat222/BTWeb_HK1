@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LayOut2</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        #khung{
+            width: 1000px;
+            height: 900px;
+            border: 1px solid blue;
+        }
+        #header1{
+            width: 100%;
+            height: 150px;
+            border-bottom: 1px solid orange;
+            background-color: aquamarine;
+            text-align: center;
+            line-height: 150px;
+        }
+        #menuNgang{
+            width: 100%;
+            height: 50px;
+            border-bottom: 1px solid red;
+            background-color: white;
+        }
+        #menuNgang1{
+            width: 20%;
+            height: 50px;
+            border-bottom: 1px solid paleturquoise;
+            background-color: white;
+        }
+        #menuDoc{
+            width: 20%;
+            height: 597px;
+            float: left;
+            background-color: goldenrod;
+        }
+        #content1{
+            width: 40%;
+            height: 597px;
+            float: left;
+            background-color: rebeccapurple;
+        }
+        #content2{
+            width: 40%;
+            height: 597px;
+            float: right;
+            background-color: salmon;
+        }
+        #mini-menu{
+            width: 40%;
+            height: 50px;
+            float: left;
+        }
+        #footer{
+            width: 100%;
+            height: 100px;
+            border-bottom: 1px solid red;
+            background-color: greenyellow;
+            clear: both;
+        }
+        #mini-menu li{
+            display: inline-block;
+            margin-left: 10px;
+            line-height: 50px;
+        }
+        #mini-menu li{
+            text-decoration: none;
+        }
+        #mini-menu{
+            line-height: 50px;
+            margin-left: 300px;
+        }
+        #menuDoc img{
+            border-radius: 50%;
+            width: 80%;
+            box-shadow: 5px 8px 5px black;
+        }
+        #menuDoc ul li{
+            list-style-type: none;
+            background-color: red;
+            width: 150px;
+            margin: 5px;
+            height: 30px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="khung">
+        <div id="header1">
+            EXAMPLE CAFE MENU
+        </div>
+        <div id="menuNgang">
+            <ul id="mini-menu">
+                <li menuNgang1><a href="#">
+                    </a><img src="/BaiTap/home.jpg" width="30px" style="margin-top: 5px;">
+                </li>
+                <li><a href="#">Start</a></li>
+                <li><a href="#">Start</a></li>
+                <li><a href="#">Start</a></li>
+            </ul>
+            <div id="menuNgang2">
+                <input type="search" name="search-btn">
+                <input type="button" value="GO">
+            </div>
+        </div>
+        <div id="menuDoc">
+            <ul>
+                <li>v</li>
+                <li>b</li>
+                <li>d</li>
+                <li>f</li>
+                <li>e</li>
+            </ul>
+            <img src="/BaiTap/fiddler.jpg" alt="">
+        </div>
+        <div id="content1"></div>
+        <div id="content2"></div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

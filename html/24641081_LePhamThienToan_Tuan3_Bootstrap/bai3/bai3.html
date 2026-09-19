@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autumn Travel Company</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .container {
+            width: 1700px !important;
+            max-width: 1050px !important;
+            height: 900px !important;
+            border: 1px solid #1a1a1a;
+            padding: 0 !important;
+            background-color: #ffffff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            user-select: none;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .header1 {
+            background-color: #a33f11;
+            text-align: left;
+            padding: 8px 0;
+            padding-left: 60px;
+            text-shadow: 
+            0 0 6px rgba(255, 255, 255, 0.9),
+            0 0 12px rgba(255, 255, 255, 0.8),
+            0 0 18px rgba(255, 220, 200, 0.7);
+            color: rgb(21, 145, 21);
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            text-shadow:
+                0 0 5px #0505f9,
+                0 0 10px #0505f9,
+                0 0 15px #0505f9;
+        }
+
+        .top-logo-bar img {
+            max-height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .nav-bar-strip {
+            background-color: #ffffff;
+            border-bottom: 1.5px solid #d4a373;
+            padding: 5px 40px;
+        }
+
+        .nav-bar-strip .nav-link {
+            color: #b1521a;
+            font-family: Georgia, serif;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 4px 22px;
+            transition: color 0.2s;
+        }
+
+        .nav-bar-strip .nav-link:hover {
+            color: #69781b;
+            text-decoration: underline;
+        }
+
+        .banner-leaves-wrapper {
+            width: 100%;
+            height: 175px;
+            position: relative;
+            overflow: hidden;
+            background-color: #4a2810;
+        }
+
+        .banner-leaves-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .leaves-vine-border {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 18px;
+            background: linear-gradient(180deg, transparent 0%, rgba(53, 94, 27, 0.6) 100%);
+            pointer-events: none;
+        }
+
+        .section-heading {
+            color: #b58d3d;
+            font-size: 32px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Georgia, serif;
+            letter-spacing: 0.5px;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+        }
+
+        .philosophy-quote {
+            color: #9b870c;
+            font-size: 17.5px;
+            font-style: italic;
+            font-weight: bold;
+            line-height: 1.45;
+            max-width: 90%;
+        }
+
+        .input-underline {
+            width: 85%;
+            border: none;
+            border-bottom: 2px solid #c9c9c9;
+            background: transparent;
+            font-size: 19px;
+            padding: 8px 4px;
+            color: #4a4a4a;
+            outline: none;
+            font-family: Arial, sans-serif;
+            transition: border-color 0.2s;
+        }
+
+        .input-underline::placeholder {
+            color: #7d8285;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+
+        .input-underline:focus {
+            border-bottom-color: #69781b;
+            background-color: #fafdf7;
+        }
+
+        .btn-signup {
+            background-color: #69781b;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            padding: 8px 24px;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+            transition: background-color 0.2s;
+        }
+
+        .btn-signup:hover {
+            background-color: #556214;
+            color: #ffffff;
+        }
+
+        .links-box {
+            background-color: #fceee0;
+            border-radius: 20px;
+            padding: 22px 28px;
+            box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .sidebar-title {
+            color: #2b7234;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: Georgia, serif;
+            letter-spacing: 0.5px;
+        }
+
+        .custom-bullet-list {
+            list-style: none;
+            padding-left: 12px;
+            margin: 0;
+        }
+
+        .custom-bullet-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 6px;
+            font-size: 16.5px;
+            color: #a84419;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+
+        .custom-bullet-list li::before {
+            content: "■";
+            position: absolute;
+            left: 0;
+            top: -1px;
+            font-size: 11px;
+            color: #662200;
+        }
+
+        .more-info-text {
+            color: #4b4b4b;
+            font-size: 14px;
+            line-height: 1.4;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+        }
+
+        .footer-bg-wrapper {
+            height: 60px;
+            background-color: #ffffff;
+            background-image: url('./footer.png');
+            background-repeat: repeat-x;
+            background-position: center bottom;
+            background-size: auto 60px;
+            border-top: 1px solid #708238;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .footer-text {
+            color: #1a1a1a;
+            font-family: 'Times New Roman', Georgia, serif;
+            font-size: 21px;
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0.75);
+            padding: 2px 20px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="min-vh-100 d-flex justify-content-center align-items-center m-0 p-0">
+
+<div class="container">
+
+    <header>
+
+        <header class="header1">
+            <h1>AUTUMN TRAVEL COMPANY</h1>
+        </header>
+
+        <nav class="nav nav-bar-strip gap-2">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#products" class="nav-link">Products</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#order" class="nav-link">Order</a>
+        </nav>
+
+        <div class="banner-leaves-wrapper">
+            <img 
+                src="./line.png" 
+                class="banner-leaves-img"
+                onerror="this.src='https://placehold.co/1700x175/7b3f00/e6a15c?text=Autumn+Leaves+Banner'"
+            >
+            <div class="leaves-vine-border"></div>
+        </div>
+    </header>
+
+    <main class="row flex-grow-1 px-5 pt-3 pb-2 mx-0 align-items-start">
+
+        <section class="col-8 pe-4">
+            <h1 class="section-heading mb-3">Sign up for membership benefits</h1>
+
+            <p class="philosophy-quote mb-4">
+                Our philosophical values are transparency, respect, formality and responsibility. Our stimulus is your enthusiasm. Our motto is your satisfaction.
+            </p>
+
+            <form action="#" method="post" onsubmit="return false;">
+                <div class="mb-3">
+                    <input type="text" class="input-underline" placeholder="Username" required>
+                </div>
+
+                <div class="mb-3">
+                    <input type="email" class="input-underline" placeholder="E-mail" required>
+                </div>
+
+                <div class="mb-3">
+                    <input type="password" class="input-underline" placeholder="Password" required>
+                </div>
+
+                <div class="mb-4">
+                    <input type="password" class="input-underline" placeholder="Retype password" required>
+                </div>
+
+                <div>
+                    <button type="submit" class="btn btn-signup">SIGN ME UP</button>
+                </div>
+            </form>
+        </section>
+
+        <aside class="col-4 ps-4">
+            <!-- Box Links -->
+            <div class="links-box mb-4">
+                <h2 class="sidebar-title mb-3">Links</h2>
+                <ul class="custom-bullet-list">
+                    <li>Make your Own Tour</li>
+                    <li>Maldives Tours</li>
+                    <li>Nature &amp; Adventure</li>
+                    <li>Readymade Tours</li>
+                    <li>Europe Tours</li>
+                    <li>Rusia Tours</li>
+                </ul>
+            </div>
+
+            <div class="ps-2">
+                <h2 class="sidebar-title mb-3">More info</h2>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="border border-secondary-subtle p-1 bg-white shadow-sm flex-shrink-0">
+                        <img 
+                            src="./leaf.png" 
+                            style="width: 80px; height: 60px; object-fit: cover;"
+                            onerror="this.src='https://placehold.co/80x60/c15c25/ffffff?text=Leaf'"
+                        >
+                    </div>
+                    <p class="more-info-text mb-0">
+                        Our purpose is the client who gives to us the opportunity to serve and to make known the reality around the world.
+                    </p>
+                </div>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer class="footer-bg-wrapper">
+        <div class="footer-text">
+            &copy; 2017 Software Engineering Department | Test Date: 16 Sept 2017
+        </div>
+    </footer>
+
+</div>
+
+</body>
+</html>

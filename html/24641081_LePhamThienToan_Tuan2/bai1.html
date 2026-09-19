@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Cafe Menu</title>
+    <style>
+        .container{
+            width: 1700px;
+            height: 1000px;
+            border: 1px solid red;
+        }
+        .container2{
+            width: 100%;
+            background-color: #000;
+            color: white;
+            padding: 10px;
+            flex-shrink: 0;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+        h1{
+            color: brown;
+            text-shadow: 10px 20px 12px rgba(255, 0, 0, 0.4);
+            text-align: center;
+            height: 40px;
+        }
+
+        .menu{
+            border-bottom: 1px solid black;
+            border-top: 1px solid black;
+            list-style: none;
+            color: white;
+            background-color: rgb(250, 137, 174);
+            height: 50px;
+            border-left: 80% solid black;
+            padding-left: 500px;
+            margin: 0;
+            display: flex;
+        }
+        
+        .menu a{
+            font-size: 20px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .menu li{
+            border-right: 2px solid black;
+            padding: 10px 20px;
+        }
+
+        .menu li :last-child{
+            border-right: none;
+        }
+
+        .left_col{
+            height: 750px;
+            width: 15%;
+            float: left;
+        }
+        .center_col{
+            height: 750px;
+            width: 55%;
+            float: left;
+        }
+        .right_col{
+            height: 750px;
+            width: 30%;
+            float: left;
+        }
+        .menu_doc{
+            
+            color: white;
+            text-decoration: none;
+            display: flex;
+            margin-left: 0px;
+            padding-left: 0px;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .menu_doc li{
+            font-size: 20px;
+            background-color: rgb(250, 137, 174);
+            border: 1px solid;
+            border-radius: 15px;
+            padding-left: 15px;
+            height: 40px;
+            width: 95%;
+            display: flex;
+            align-items: center;
+        }
+        
+        .h2_cus {
+            background-color: rgb(250, 137, 174); /* Màu nền hồng của bạn */
+            color: brown;
+            font-weight: bold;
+            letter-spacing: 15px;
+            margin: 15px 20px;        
+            width: 500px;          
+            box-sizing: border-box; 
+            margin-left: 250px;
+            padding: 5px 0 10px 40px;
+            font-size: 30px;
+            height: 40px;
+        }
+
+        *{
+            box-sizing: border-box;
+        }
+
+        footer {
+            background-color: #e5989b;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-style: italic;
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+            width: 100%;
+            clear: both;
+            height: 115px;
+            padding-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" id="top">
+        <h1><i>EXAMPLE CAFE MENU</i></h1>
+        <ul class="menu">
+            <li><a href=""><img src="/html/24641081_LePhamThienToan_Tuan2/bai1/icons8-home-50.png" alt="home" style="height: 30px;"></a></li>
+            <li><a href="">STARTERS</a></li>
+            <li><a href="">MAIN COURSES</a></li>
+            <li><a href="">DESERTS</a></li>
+            <input type="text" placeholder="sreach" style="height: 25px; display: flex; margin-left: 80px; margin-top: 8px;"/>
+            <button type="submit" style="height: 30px; margin-top: 8px; margin-left: 5px;">Go</button>
+        </ul>
+        <div class="left_col">
+            <ul class="menu_doc">
+                <li>Cafe Latte</li>
+                <li>Cappuccino</li>
+                <li>Choco Bliss</li>
+                <li>Ice-cream Cafe</li>
+                <li>Shake Choice</li>
+            </ul>
+            <img src="/html/24641081_LePhamThienToan_Tuan2/bai1/company.png" alt="" style="height: 150px; width: 250px; border-radius: 50%; overflow: hidden; box-shadow: 5px 20px 10px rgb(250, 137, 174);">
+        </div>
+        
+        <div class="center_col">
+            <h2 class="h2_cus">Starter</h2>
+            <ul>
+                <li>Chesnut and Mushroom Goujons <span style="color: red;"><u>(v)</u></span></li>
+                <li>Goat Cheese <span style="color: red;"><u>(v)</u></span></li>
+                <li><span style="color: chocolate;">HONEY SOY CHICKEN KEBABS</span> <span style="color: red;"><u>(V)</u></span></li>
+                <li>Seafood Salad <span style="color: red;"><u>(v)</u></span></li>
+            </ul>
+            <a href="top" style="color: red; margin-left: 15px;"><u>Back to Top</u></a>
+
+            <h2 class="h2_cus">Desserts</h2>
+            <ul>
+                <li>Lemon Sorbet <span style="color: red;"><u>(v)</u></span></li>
+                <li>Chocolate Mud Pie <span style="color: red;"><u>(v)</u></span></li>
+                <li>Pecan Pie <span style="color: red;"><u>(V)</u></span></li>
+                <li>Selection of fine Cheeses from Around the World <span style="color: red;"><u>(v)</u></span></li>
+            </ul>
+            <a href="top" style="color: red; margin-left: 15px;"><u>Back to Top</u></a>
+
+            <h2 class="h2_cus">INFORMATION</h2>
+            <table style="border-spacing: 40px 15px; border-spacing: 10px 10px; margin: 0;">
+                <tr>
+                    <td><input type="text" placeholder="First Name" style="height: 40px; width: 400px; margin-left: 20px;"></td>
+                    <td><input type="text" placeholder="Last Name" style="height: 40px; width: 400px; margin-left: 20px;"></td>
+                </tr>
+
+                <tr>
+                    <td><input type="text" placeholder="Email" style="height: 40px; width: 400px; margin-left: 20px;"></td>
+                    <td><input type="text" placeholder="Telephone" style="height: 40px; width: 400px; margin-left: 20px;"></td>
+                </tr>
+
+                <tr>
+                    <td><select name="nuoc" id="" style="height: 50px; width: 400px; margin-left: 20px;">
+                        <option value="1">USA</option>
+                        <option value="2">VN</option>
+                        <option value="3">CND</option>
+                        <option value="4">CN</option>
+                        </select>
+                    </td>
+
+                    <td style="margin-left: 20px;">
+                        <label>
+                            <input type="radio" name="nationality" value="vietnamese"> Vietnamese
+                        </label>
+                        
+                        <label>
+                            <input type="radio" name="nationality" value="foreigner"> Foreigner
+                        </label>
+
+                    </td>
+
+                    <tr>
+                        <td colspan="2">
+                            <textarea name="" id="" style="width: 825px; height: 70px; margin-left: 23px;">Comment</textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <button type="submit">Submit</button>
+                            <button type="submit">Cancel</button>
+                        </td>
+                    </tr>
+                </tr>
+            </table>
+             
+        </div>
+
+        <div class="right_col">
+            <div class="container2">
+                <h2 style="color: white; font-size: 30px; margin-top: auto; margin-left: auto;">Events</h2>
+                <div>
+                    <h3 style="margin-left: 35px;">Regular Meeting</h3>
+                    <img src="/html/24641081_LePhamThienToan_Tuan2/bai1/meeting.png" alt="" style="height: 200px; margin-left: 35px; width: 80%; object-fit: cover;">
+                    <p style="margin-left: 35px;">
+                        <i>Host your regular team meetings or activities in the comfort of your own private room.</i>
+                        <span>
+                            <details style="display: inline-block; margin-left: 35px; margin-right: 35px;">
+                                <summary style="cursor: pointer; color: rgb(245, 81, 81); list-style: none; margin-bottom: 8px; display: inline-block;"><i><u>Read more...</u></i></summary>
+                                <span>
+                                    Charge up on Kith's aromatic coffee and delectable dishes for that extra boost in your work! 
+                                </span>
+                            </details>
+                        </span>
+                    </p>
+                </div>
+
+                <div>
+                    <h3 style="margin-left: 35px;">Regular Meeting</h3>
+                    <img src="/html/24641081_LePhamThienToan_Tuan2/bai1/launch.png" alt="" style="height: 200px; margin-left: 35px; width: 80%;">
+                    <p style="margin-left: 35px;">
+                        <i>Discover your ideal setting for a corporate dinner and dance here at Kith.</i>
+                        <span>
+                            <details style="display: inline-block; margin-left: 35px; margin-right: 35px;">
+                                <summary style="cursor: pointer; color: rgb(245, 81, 81); list-style: none; margin-bottom: 8px; display: inline-block;"><i><u>Read more...</u></i></summary>
+                                <span>
+                                    Make your event a night to remember at our premium eatery where you can indulge in what we specialise in: Great food and great service
+                                </span>
+                            </details>
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <footer>ABC Company &copy; - 12345678 - abccoffee@gmail.com</footer>
+        </div>
+    </div>
+
+    
+    
+    
+</body>
+</html>

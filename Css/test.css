@@ -1,0 +1,16 @@
+
+h1{
+    font-size: 100px;
+    color: red;
+    }
+p{
+    width: 500px;
+    background-color: aquamarine;
+    color: black;
+    border: 5px dotted rgb(60, 177, 60);
+    margin-left: 600px;
+    margin-bottom: 100px;
+    padding: 100px;
+    text-align: justify;
+    font-size: 30px;
+    }
